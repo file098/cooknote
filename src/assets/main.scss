@@ -1,0 +1,14 @@
+@import "./base.scss";
+@import "./animations.scss";
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+}
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(0, 0%, 87%, 0.2);
+  }
+}
