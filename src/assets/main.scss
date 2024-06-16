@@ -7,8 +7,7 @@ main {
   grid-template-columns: 1fr 2fr;
   place-items: center;
 }
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(0, 0%, 87%, 0.2);
-  }
-}
+// @media (hover: hover) {
+//   a:hover {
+//     background-color: hsla(0, 0%, 87%, 0.2);
+//   }

@@ -4,11 +4,7 @@ import { useAppStore } from "./stores/appState";
 import ListComponent from "./components/ListComponent.vue";
 
 const store = useAppStore();
-const selectedItem = ref<string | null>(null);
 
-function handleItemClick(title: string) {
-  selectedItem.value = title;
-}
 </script>
 
 <template>
@@ -17,14 +13,14 @@ function handleItemClick(title: string) {
       <span id="main-title" :key="store.title">{{ store.title }}</span>
     </transition>
     <section>
-      <ListComponent @item-click="handleItemClick" />
+      <ListComponent />
     </section>
   </main>
 </template>
 
 <style scoped lang="scss">
 #main-title {
-  font-size: xx-large;
+  font-size: 24px;
   cursor: pointer;
   margin-left: 2rem;
   justify-self: start;

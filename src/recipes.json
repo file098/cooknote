@@ -1,0 +1,19 @@
+[
+  { "title": "Enchiladas Verdes", "visible": true },
+  {
+    "title": "Creamy Tuscan Chicken with Sun-Dried Tomatoes and Spinach",
+    "visible": true
+  },
+  { "title": "Pad Thai", "visible": true },
+  {
+    "title": "Roasted Vegetable and Quinoa Salad with Lemon-Herb Vinaigrette",
+    "visible": true
+  },
+  { "title": "Ratatouille", "visible": true },
+  { "title": "Moussaka", "visible": true },
+  { "title": "Beef Wellington", "visible": true },
+  {
+    "title": "Grilled Salmon with Honey-Dijon Glaze and Roasted Asparagus",
+    "visible": true
+  }
+]
