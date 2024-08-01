@@ -6,14 +6,13 @@ import { CSSPlugin } from "gsap/CSSPlugin";
 // Register the plugins
 gsap.registerPlugin(ScrollToPlugin, CSSPlugin);
 
-export function createScrollTimeline(
-  mainRef: gsap.TweenTarget,
-  backButtonRef: gsap.TweenTarget,
-  index: number
-) {
+export function createScrollTimeline(index: number) {
+  const main = "#main";
+  const backButton = "#back-button";
+
   const tl = gsap.timeline();
 
-  tl.to(mainRef, {
+  tl.to(main, {
     duration: 1,
     scrollTo: { x: index * window.innerWidth, autoKill: false },
     ease: "power4.inOut",
@@ -21,7 +20,7 @@ export function createScrollTimeline(
 
   if (index > 0) {
     tl.to(
-      backButtonRef,
+      backButton,
       {
         duration: 0.3,
         opacity: 1,
@@ -30,8 +29,6 @@ export function createScrollTimeline(
       },
       1
     );
-
-    // Fade/Slide in components
     tl.fromTo(
       ".fade-in",
       { opacity: 0, x: 100 },
@@ -40,7 +37,7 @@ export function createScrollTimeline(
     );
   } else {
     tl.to(
-      backButtonRef,
+      backButton,
       {
         duration: 0.3,
         opacity: 0,
@@ -54,10 +51,9 @@ export function createScrollTimeline(
   return tl;
 }
 
-export function initializeGSAP(
-  mainRef: gsap.TweenTarget,
-  backButtonRef: gsap.TweenTarget
-) {
-  gsap.set(mainRef, { scrollTo: { x: 0 } });
-  gsap.set(backButtonRef, { opacity: 0, x: -20 });
+export function initializeGSAP() {
+  const main = "#main";
+  const backButton = "#back-button";
+  gsap.set(main, { scrollTo: { x: 0 } });
+  gsap.set(backButton, { opacity: 0, x: -20 });
 }

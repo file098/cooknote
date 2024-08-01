@@ -1,35 +1,28 @@
 // src/composables/useScroll.js
-import { ref } from "vue";
-import { createScrollTimeline } from "..";
+import { useAppStore } from "@/stores/appState";
+import { createScrollTimeline } from "../index";
+
+const appState = useAppStore();
 
 export function useScroll() {
-  const currentSection = ref(0);
+  function scrollToSection(index: number) {
+    appState.currentSection = index;
+    createScrollTimeline(index).play();
+  }
 
-  function scrollToSection(
-    mainRef: { value: any },
-    backButtonRef: { value: any },
-    index: number
-  ) {
-    if (mainRef) {
-      currentSection.value = index;
-      createScrollTimeline(mainRef, backButtonRef, index).play();
+  function scrollBack() {
+    if (appState.currentSection > 0) {
+      scrollToSection(appState.currentSection - 1);
     }
   }
 
-  function scrollBack(mainRef: any, backButtonRef: any) {
-    if (currentSection.value > 0) {
-      scrollToSection(mainRef, backButtonRef, currentSection.value - 1);
-    }
-  }
-
-  function scrollRight(mainRef: any, backButtonRef: any) {
-    if (currentSection.value < 1) {
-      scrollToSection(mainRef, backButtonRef, currentSection.value + 1);
+  function scrollRight() {
+    if (appState.currentSection < 1) {
+      scrollToSection(appState.currentSection + 1);
     }
   }
 
   return {
-    currentSection,
     scrollToSection,
     scrollBack,
     scrollRight,

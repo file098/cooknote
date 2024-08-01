@@ -1,8 +1,13 @@
 <script setup lang="ts">
+import { useScroll } from "@/assets/animations/composables/useScroll";
 import recipes from "../recipes.json";
 import type { Dish } from "./models";
 
-function handleClick() {}
+const { scrollRight } = useScroll();
+
+function handleClick() {
+  scrollRight();
+}
 
 const recipeList = recipes as Array<Dish>;
 </script>

@@ -1,29 +1,22 @@
 <script setup>
 import { initializeGSAP } from "@/assets/animations";
 import { useScroll } from "@/assets/animations/composables/useScroll";
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
 import ListComponent from "./components/ListComponent.vue";
 import ProcedureComponent from "./components/ProcedureComponent.vue";
 import RecipeComponent from "./components/RecipeComponent.vue";
 
-const mainRef = ref(null);
-const backButtonRef = ref(null);
-
-const { scrollBack, scrollRight } = useScroll();
+const { scrollBack } = useScroll();
 
 onMounted(() => {
-  initializeGSAP(mainRef, backButtonRef);
+  initializeGSAP();
 });
 </script>
 
 <template>
   <div class="container">
     <header>
-      <button
-        id="back-button"
-        ref="backButtonRef"
-        @click="() => scrollBack(mainRef, backButtonRef)"
-      >
+      <button id="back-button" @click="() => scrollBack()">
         <svg
           width="24px"
           height="24px"
@@ -41,7 +34,7 @@ onMounted(() => {
       </button>
       <h1 class="title">Title</h1>
     </header>
-    <main ref="mainRef">
+    <main id="main">
       <div class="sections">
         <section>
           <ListComponent />
@@ -52,9 +45,6 @@ onMounted(() => {
         </section>
       </div>
     </main>
-    <div class="buttons">
-      <button @click="scrollRight(mainRef, backButtonRef)">→</button>
-    </div>
   </div>
 </template>
 
