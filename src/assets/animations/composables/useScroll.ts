@@ -2,9 +2,8 @@
 import { useAppStore } from "@/stores/appState";
 import { createScrollTimeline } from "../index";
 
-const appState = useAppStore();
-
 export function useScroll() {
+  const appState = useAppStore();
   function scrollToSection(index: number) {
     appState.currentSection = index;
     createScrollTimeline(index).play();
