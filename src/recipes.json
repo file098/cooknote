@@ -1,19 +1,187 @@
 [
-  { "title": "Enchiladas Verdes", "visible": true },
   {
-    "title": "Creamy Tuscan Chicken with Sun-Dried Tomatoes and Spinach",
-    "visible": true
+    "id": 1,
+    "name": "Enchiladas Verdes",
+    "ingredients": [
+      "12 corn tortillas",
+      "3 cups cooked shredded chicken",
+      "2 cups green enchilada sauce",
+      "1 cup sour cream",
+      "1 cup shredded Monterey Jack cheese",
+      "1 cup shredded cheddar cheese",
+      "1/2 cup chopped cilantro",
+      "1 small onion, finely chopped",
+      "2 cloves garlic, minced",
+      "1 tablespoon olive oil",
+      "Salt and pepper to taste"
+    ],
+    "procedure": [
+      "Preheat your oven to 350°F (175°C).",
+      "In a skillet, heat olive oil over medium heat. Add onions and garlic, sauté until translucent. Add shredded chicken, season with salt and pepper, and cook for 2-3 minutes.",
+      "In a bowl, mix green enchilada sauce with sour cream until well combined.",
+      "Dip each tortilla in the enchilada sauce mixture. Fill each tortilla with the chicken mixture, roll up, and place seam-side down in a baking dish.",
+      "Pour the remaining sauce over the enchiladas and sprinkle with Monterey Jack and cheddar cheeses.",
+      "Bake for 20-25 minutes until cheese is melted and bubbly.",
+      "Garnish with chopped cilantro and serve hot."
+    ]
   },
-  { "title": "Pad Thai", "visible": true },
   {
-    "title": "Roasted Vegetable and Quinoa Salad with Lemon-Herb Vinaigrette",
-    "visible": true
+    "id": 2,
+    "name": "Creamy Tuscan Chicken with Sun-Dried Tomatoes and Spinach",
+    "ingredients": [
+      "4 boneless, skinless chicken breasts",
+      "1/2 cup sun-dried tomatoes, chopped",
+      "3 cups fresh spinach",
+      "1 cup heavy cream",
+      "1/2 cup chicken broth",
+      "1/2 cup grated Parmesan cheese",
+      "1 tablespoon olive oil",
+      "2 cloves garlic, minced",
+      "1 teaspoon dried oregano",
+      "Salt and pepper to taste"
+    ],
+    "procedure": [
+      "Season chicken breasts with salt, pepper, and dried oregano.",
+      "In a large skillet, heat olive oil over medium-high heat. Add chicken breasts and cook until golden brown and cooked through, about 6-8 minutes per side. Remove from skillet and set aside.",
+      "In the same skillet, add garlic and sauté for 1 minute until fragrant.",
+      "Add chicken broth, heavy cream, sun-dried tomatoes, and Parmesan cheese. Stir to combine and bring to a simmer.",
+      "Add spinach and cook until wilted.",
+      "Return the chicken breasts to the skillet, spooning sauce over the chicken.",
+      "Serve hot with the creamy sauce and vegetables."
+    ]
   },
-  { "title": "Ratatouille", "visible": true },
-  { "title": "Moussaka", "visible": true },
-  { "title": "Beef Wellington", "visible": true },
   {
-    "title": "Grilled Salmon with Honey-Dijon Glaze and Roasted Asparagus",
-    "visible": true
+    "id": 3,
+    "name": "Pad Thai",
+    "ingredients": [
+      "8 oz rice noodles",
+      "1/2 cup tofu, cubed",
+      "1/2 cup shrimp, peeled and deveined",
+      "2 eggs",
+      "1 cup bean sprouts",
+      "1/4 cup chopped peanuts",
+      "1/4 cup chopped green onions",
+      "3 cloves garlic, minced",
+      "2 tablespoons fish sauce",
+      "2 tablespoons tamarind paste",
+      "1 tablespoon soy sauce",
+      "1 tablespoon brown sugar",
+      "1 lime, cut into wedges",
+      "2 tablespoons vegetable oil"
+    ],
+    "procedure": [
+      "Cook rice noodles according to package instructions. Drain and set aside.",
+      "In a small bowl, mix fish sauce, tamarind paste, soy sauce, and brown sugar. Set aside.",
+      "Heat vegetable oil in a large skillet over medium-high heat. Add garlic and sauté until fragrant.",
+      "Add tofu and shrimp, cook until shrimp are pink and tofu is golden brown.",
+      "Push tofu and shrimp to the side of the skillet and add eggs. Scramble until fully cooked.",
+      "Add cooked noodles and sauce mixture to the skillet. Toss to combine.",
+      "Stir in bean sprouts and green onions.",
+      "Serve hot, garnished with chopped peanuts and lime wedges."
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Roasted Vegetable and Quinoa Salad with Lemon-Herb Vinaigrette",
+    "ingredients": [
+      "1 cup quinoa",
+      "2 cups water",
+      "1 red bell pepper, chopped",
+      "1 zucchini, chopped",
+      "1 yellow squash, chopped",
+      "1 red onion, chopped",
+      "2 tablespoons olive oil",
+      "Salt and pepper to taste",
+      "1/4 cup chopped fresh parsley",
+      "1/4 cup chopped fresh basil",
+      "1/4 cup lemon juice",
+      "1 tablespoon Dijon mustard",
+      "1 clove garlic, minced"
+    ],
+    "procedure": [
+      "Preheat your oven to 400°F (200°C).",
+      "Rinse quinoa under cold water. In a medium pot, bring quinoa and water to a boil. Reduce heat, cover, and simmer for 15 minutes until water is absorbed. Fluff with a fork and set aside.",
+      "In a large bowl, toss chopped vegetables with olive oil, salt, and pepper. Spread on a baking sheet and roast for 20-25 minutes until tender and slightly caramelized.",
+      "In a small bowl, whisk together lemon juice, Dijon mustard, garlic, and a pinch of salt and pepper. Slowly whisk in olive oil until well combined.",
+      "In a large bowl, combine cooked quinoa, roasted vegetables, parsley, and basil. Drizzle with lemon-herb vinaigrette and toss to combine.",
+      "Serve salad warm or chilled."
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Ratatouille",
+    "ingredients": [
+      "1 eggplant, diced",
+      "1 zucchini, sliced",
+      "1 yellow squash, sliced",
+      "1 red bell pepper, chopped",
+      "1 yellow bell pepper, chopped",
+      "1 red onion, chopped",
+      "4 cloves garlic, minced",
+      "2 cups tomato sauce",
+      "1/4 cup olive oil",
+      "1 teaspoon dried thyme",
+      "Salt and pepper to taste",
+      "Fresh basil for garnish"
+    ],
+    "procedure": [
+      "Preheat your oven to 375°F (190°C).",
+      "In a large bowl, toss eggplant, zucchini, yellow squash, bell peppers, and onion with olive oil, garlic, dried thyme, salt, and pepper.",
+      "Spread vegetables in a single layer on a baking sheet and roast for 30-35 minutes until tender.",
+      "In a large skillet, heat tomato sauce over medium heat. Add roasted vegetables and stir to combine.",
+      "Simmer for 10-15 minutes until flavors meld.",
+      "Serve hot, garnished with fresh basil."
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Moussaka",
+    "ingredients": [
+      "2 large eggplants, sliced",
+      "1 pound ground lamb",
+      "1 onion, chopped",
+      "3 cloves garlic, minced",
+      "2 cups tomato sauce",
+      "1/2 cup red wine",
+      "1 teaspoon ground cinnamon",
+      "1 teaspoon dried oregano",
+      "Salt and pepper to taste",
+      "1/4 cup olive oil",
+      "1/4 cup grated Parmesan cheese",
+      "2 cups béchamel sauce"
+    ],
+    "procedure": [
+      "Preheat your oven to 375°F (190°C).",
+      "Sprinkle eggplant slices with salt and let sit for 30 minutes to draw out moisture. Rinse and pat dry.",
+      "In a large skillet, heat olive oil over medium heat. Fry eggplant slices until golden brown on both sides. Set aside on paper towels to drain.",
+      "In the same skillet, cook ground lamb with onions and garlic until browned. Add tomato sauce, red wine, cinnamon, oregano, salt, and pepper. Simmer for 20 minutes until thickened.",
+      "In a baking dish, layer eggplant slices and meat sauce. Pour béchamel sauce over the top and sprinkle with grated Parmesan cheese.",
+      "Bake for 30-35 minutes until the top is golden and bubbling.",
+      "Let cool for 10 minutes before serving."
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Beef Wellington",
+    "ingredients": [
+      "1 2-pound beef tenderloin",
+      "Salt and pepper to taste",
+      "2 tablespoons olive oil",
+      "1/2 pound mushrooms, finely chopped",
+      "2 cloves garlic, minced",
+      "1/4 cup Dijon mustard",
+      "6 slices prosciutto",
+      "1 sheet puff pastry, thawed",
+      "1 egg, beaten"
+    ],
+    "procedure": [
+      "Preheat your oven to 400°F (200°C).",
+      "Season beef tenderloin with salt and pepper. Heat olive oil in a large skillet over high heat. Sear beef on all sides until browned. Remove and let cool.",
+      "In the same skillet, add mushrooms and garlic. Cook until mushrooms release their moisture and it evaporates. Let cool.",
+      "Brush beef with Dijon mustard. Spread mushroom mixture over prosciutto slices and wrap around the beef.",
+      "Roll out puff pastry and wrap around the beef. Seal edges and brush with beaten egg.",
+      "Place beef on a baking sheet and bake for 25-30 minutes until pastry is golden brown and beef reaches desired doneness.",
+      "Let rest for 10 minutes before slicing and serving."
+    ]
   }
 ]

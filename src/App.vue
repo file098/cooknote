@@ -1,13 +1,15 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import { useScroll } from "@/animations/composables/useScroll";
-import { initializeGSAP } from "@/animations";
+import { initializeGSAP } from "@/assets/animations";
+import { useScroll } from "@/assets/animations/composables/useScroll";
+import { onMounted, ref } from "vue";
+import ListComponent from "./components/ListComponent.vue";
+import ProcedureComponent from "./components/ProcedureComponent.vue";
+import RecipeComponent from "./components/RecipeComponent.vue";
 
 const mainRef = ref(null);
 const backButtonRef = ref(null);
 
-const { currentSection, scrollToSection, scrollBack, scrollRight } =
-  useScroll();
+const { scrollBack, scrollRight } = useScroll();
 
 onMounted(() => {
   initializeGSAP(mainRef, backButtonRef);
@@ -41,8 +43,13 @@ onMounted(() => {
     </header>
     <main ref="mainRef">
       <div class="sections">
-        <section></section>
-        <section></section>
+        <section>
+          <ListComponent />
+        </section>
+        <section>
+          <RecipeComponent />
+          <ProcedureComponent />
+        </section>
       </div>
     </main>
     <div class="buttons">
@@ -65,7 +72,7 @@ header {
   align-items: center;
   padding: 20px;
   position: relative;
-  color: var(--color-heading);
+  @include theme("color", $primary-text-color);
 }
 
 .title {
@@ -107,5 +114,6 @@ main {
   opacity: 0;
   background: none;
   border: none;
+  @include theme("color", $primary-text-color);
 }
 </style>

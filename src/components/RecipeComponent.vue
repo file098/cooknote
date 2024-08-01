@@ -1,13 +1,15 @@
 <template>
-  <section class="items__wrapper">
-    <span v-for="index in 6" :key="index">item {{ index }}</span>
-  </section>
-  <section>Procedure</section>
+  <div class="items__wrapper fade-in">
+    <span class="item" v-for="index in 6" :key="index">item {{ index }}</span>
+  </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .items__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: none;
+  &.fade-in {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

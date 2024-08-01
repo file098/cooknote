@@ -30,6 +30,14 @@ export function createScrollTimeline(
       },
       1
     );
+
+    // Fade/Slide in components
+    tl.fromTo(
+      ".fade-in",
+      { opacity: 0, x: 100 },
+      { opacity: 1, x: 0, duration: 0.5, stagger: 0.2 },
+      "-=0.5"
+    );
   } else {
     tl.to(
       backButtonRef,
