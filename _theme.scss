@@ -14,12 +14,12 @@ $general-background-light: "general-background-light";
 
 $themes: (
   $light-theme: (
-    $primary-color: #546a7b,
+    $primary-color: #393d3f,
     $primary-text-color: #393d3f,
     $general-background: #ffffff,
   ),
   $dark-theme: (
-    $primary-color: #546a7b,
+    $primary-color: #fdfdff,
     $primary-text-color: #fdfdff,
     $general-background: #393d3f,
   ),
@@ -33,13 +33,17 @@ $themes: (
   $additionalProperties
 ) {
   @if $additionalPropertiesPositionIsFront {
-    #{$property}: unquote(
-      $additionalProperties + " " + map-get($theme, $color)
-    );
+    & {
+      #{$property}: unquote(
+        $additionalProperties + " " + map-get($theme, $color)
+      );
+    }
   } @else {
-    #{$property}: unquote(
-      map-get($theme, $color) + " " + $additionalProperties
-    );
+    & {
+      #{$property}: unquote(
+        map-get($theme, $color) + " " + $additionalProperties
+      );
+    }
   }
 }
 

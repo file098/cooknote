@@ -1,6 +1,6 @@
 // src/composables/useScroll.js
-import { useAppStore } from "@/stores/appState";
-import { createScrollTimeline } from "../index";
+import { useAppStore } from "../stores/appStore";
+import { createScrollTimeline } from "../assets/animations/index";
 
 export function useScroll() {
   const appState = useAppStore();

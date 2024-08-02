@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import { useScroll } from "@/assets/animations/composables/useScroll";
+import { useScroll } from "./assets/animations/composables/useScroll";
 import recipes from "../recipes.json";
-import type { Dish } from "./models";
 
 const { scrollRight } = useScroll();
+
+interface Dish {
+  id: number;
+  name: string;
+  ingredients: Array<string>;
+  procedure: Array<string>;
+}
 
 function handleClick() {
   scrollRight();
@@ -16,11 +22,7 @@ const recipeList = recipes as Array<Dish>;
   <div class="list-wrapper">
     <ul>
       <li v-for="recipe in recipeList" :key="recipe.name" @click="handleClick">
-        <!-- <router-link :to="`/recipe/${recipe.title}`"> -->
-        <!-- <a> -->
         {{ recipe.name }}
-        <!-- </a> -->
-        <!-- </router-link> -->
       </li>
     </ul>
   </div>

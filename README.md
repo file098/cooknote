@@ -1,10 +1,75 @@
-# Cooknote
+# Nuxt 3 Minimal Starter
 
-all the recipes i'm able to cook
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-> this will be an aniation playground
+## Setup
 
-it's a single page application with minimalist style. The layout is very similar to vue initial page
-it will have a title on the left taking less than half of the screen and on the right a list of all the recipes.
-when a recipe is clicked, the title will replace the title and the list will be replaced by the procedure and ingridients.
-everything must be handled with smooth transiotions, opacity playing, transformations.
+Make sure to install the dependencies:
+
+```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
