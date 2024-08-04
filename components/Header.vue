@@ -8,9 +8,8 @@
 </template>
 
 <script setup lang="ts">
-function scrollBack() {
-  // Your scroll back logic
-}
+import { useScroll } from "~/compostables/useScroll";
+const { scrollBack } = useScroll();
 </script>
 
 <style scoped lang="scss">
