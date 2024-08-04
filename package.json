@@ -10,12 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "vue": "latest",
+    "@pinia/nuxt": "^0.5.2",
     "mongoose": "^8.5.2",
     "nuxt": "^3.12.4",
     "nuxt-mongoose": "^1.0.6",
     "nuxt-server-utils": "^0.0.7",
-    "pinia": "^2.2.0"
+    "pinia": "^2.2.0",
+    "vue": "latest"
   },
   "devDependencies": {
     "@hypernym/nuxt-gsap": "^2.4.2",

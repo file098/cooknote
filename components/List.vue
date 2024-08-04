@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useScroll } from "./assets/animations/composables/useScroll";
+import { useScroll } from "../compostables/useScroll";
 import recipes from "../recipes.json";
 
 const { scrollRight } = useScroll();

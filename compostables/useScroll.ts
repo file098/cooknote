@@ -3,21 +3,21 @@ import { useAppStore } from "../stores/appStore";
 import { createScrollTimeline } from "../assets/animations/index";
 
 export function useScroll() {
-  const appState = useAppStore();
+  const appStore = useAppStore();
   function scrollToSection(index: number) {
-    appState.currentSection = index;
+    appStore.currentSection = index;
     createScrollTimeline(index).play();
   }
 
   function scrollBack() {
-    if (appState.currentSection > 0) {
-      scrollToSection(appState.currentSection - 1);
+    if (appStore.currentSection > 0) {
+      scrollToSection(appStore.currentSection - 1);
     }
   }
 
   function scrollRight() {
-    if (appState.currentSection < 1) {
-      scrollToSection(appState.currentSection + 1);
+    if (appStore.currentSection < 1) {
+      scrollToSection(appStore.currentSection + 1);
     }
   }
 
