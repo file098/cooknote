@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { useAppStore } from "~/stores/appStore";
 import { useScroll } from "~/compostables/useScroll";
+import { useAppStore } from "~/stores/appStore";
 const { scrollBack } = useScroll();
+const appStore = useAppStore();
 </script>
 
 <template>
@@ -9,7 +10,7 @@ const { scrollBack } = useScroll();
     <button id="back-button" @click="scrollBack">
       <img src="/assets/icons/back.svg" />
     </button>
-    <h1 class="title">Title</h1>
+    <h1 class="title">{{ appStore.selectedDish?.name }}</h1>
   </header>
 </template>
 
