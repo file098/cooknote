@@ -1,17 +1,13 @@
 <script setup lang="ts">
+import type { Dish } from "~/types/dish";
 import { useScroll } from "../compostables/useScroll";
 import recipes from "../recipes.json";
 
 const { scrollRight } = useScroll();
 
-interface Dish {
-  id: number;
-  name: string;
-  ingredients: Array<string>;
-  procedure: Array<string>;
-}
-
-function handleClick() {
+function handleClick(dish: Dish) {
+  const appStore = useAppStore();
+  appStore.selectedDish = dish;
   scrollRight();
 }
 
@@ -21,8 +17,8 @@ const recipeList = recipes as Array<Dish>;
 <template>
   <div class="list-wrapper">
     <ul>
-      <li v-for="recipe in recipeList" :key="recipe.name" @click="handleClick">
-        {{ recipe.name }}
+      <li v-for="dish in recipeList" :key="dish.id" @click="handleClick(dish)">
+        {{ dish.name }}
       </li>
     </ul>
   </div>

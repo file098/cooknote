@@ -1,6 +1,15 @@
+<script setup lang="ts">
+import type { Dish } from "~/types/dish";
+
+const appStore = useAppStore();
+const selectedDish = computed<Dish | null>(() => appStore.selectedDish);
+</script>
+
 <template>
   <div class="items__wrapper fade-in">
-    <span class="item" v-for="index in 6" :key="index">item {{ index }}</span>
+    <span class="item" v-for="ingredient in selectedDish?.ingredients" :key="selectedDish?.id">
+      {{ ingredient }}
+    </span>
   </div>
 </template>
 

@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useAppStore } from "~/stores/appStore";
+import { useScroll } from "~/compostables/useScroll";
+const { scrollBack } = useScroll();
+</script>
+
 <template>
   <header>
     <button id="back-button" @click="scrollBack">
@@ -6,11 +12,6 @@
     <h1 class="title">Title</h1>
   </header>
 </template>
-
-<script setup lang="ts">
-import { useScroll } from "~/compostables/useScroll";
-const { scrollBack } = useScroll();
-</script>
 
 <style scoped lang="scss">
 @import "../assets/theme";
@@ -21,22 +22,22 @@ header {
   padding: 20px;
   position: relative;
   @include theme("", $primary-text-color);
-}
 
-.title {
-  flex-grow: 1;
-  text-align: center;
-  margin: 0;
-}
+  h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+  }
 
-#back-button {
-  position: absolute;
-  left: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
-  opacity: 0;
-  background: none;
-  border: none;
-  @include theme("color", $primary-text-color);
+  & #back-button {
+    position: absolute;
+    left: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    opacity: 0;
+    background: none;
+    border: none;
+    @include theme("color", $primary-text-color);
+  }
 }
 </style>
