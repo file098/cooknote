@@ -1,0 +1,8 @@
+@mixin icon-button {
+  & {
+    position: absolute;
+    padding: 10px 20px;
+    cursor: pointer;
+    @include theme("color", $primary-text-color);
+  }
+}

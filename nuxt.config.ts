@@ -8,4 +8,7 @@ export default defineNuxtConfig({
   headlessui: {
     prefix: "Headless",
   },
+  devServer: {
+    port: 9000,
+  },
 });

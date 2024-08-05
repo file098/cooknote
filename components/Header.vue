@@ -3,26 +3,32 @@ import { useScroll } from "~/compostables/useScroll";
 import { useAppStore } from "~/stores/appStore";
 const { scrollBack } = useScroll();
 const appStore = useAppStore();
+
+function handleBack() {
+  scrollBack();
+}
 </script>
 
 <template>
   <header>
-    <button id="back-button" @click="scrollBack">
+    <button id="back-button" @click="handleBack">
       <img src="/assets/icons/back.svg" />
     </button>
-    <h1 class="title">{{ appStore.selectedDish?.name }}</h1>
+    <h1 class="title">
+      {{ appStore.selectedDish ? `${appStore.selectedDish.name}` : "Title" }}
+    </h1>
   </header>
 </template>
 
 <style scoped lang="scss">
-@import "../assets/theme";
+@import "~/assets/main.scss";
 
 header {
   display: flex;
   align-items: center;
   padding: 20px;
   position: relative;
-  @include theme("", $primary-text-color);
+  @include theme("color", $primary-text-color);
 
   h1 {
     flex-grow: 1;
@@ -31,14 +37,13 @@ header {
   }
 
   & #back-button {
-    position: absolute;
-    left: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    opacity: 0;
-    background: none;
-    border: none;
-    @include theme("color", $primary-text-color);
+    @include icon-button();
+
+    & {
+      opacity: 0;
+      background: none;
+      border: none;
+    }
   }
 }
 </style>

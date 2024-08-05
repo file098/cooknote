@@ -12,7 +12,6 @@
   </main>
 </template>
 
-
 <style scoped lang="scss">
 main {
   flex: 1;
@@ -23,6 +22,7 @@ main {
   display: flex;
   width: 200vw;
   height: 100%;
+  overflow-y: auto;
 }
 
 .buttons {
