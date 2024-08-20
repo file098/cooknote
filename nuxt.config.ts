@@ -14,6 +14,11 @@ export default defineNuxtConfig({
       ],
     },
   },
+  gsap: {
+    extraPlugins: {
+      text: true
+    }
+  },
   devtools: { enabled: true },
   modules: [
     "@hypernym/nuxt-gsap",

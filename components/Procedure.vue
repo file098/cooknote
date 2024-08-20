@@ -5,7 +5,6 @@ import type { Dish } from "~/types/dish";
 const appStore = useAppStore();
 const selectedDish = computed<Dish | null>(() => appStore.selectedDish);
 
-
 onUpdated(() => {
   gsap.fromTo(
     ".procedure ol li",

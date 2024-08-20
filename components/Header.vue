@@ -1,12 +1,26 @@
 <script setup lang="ts">
+import { watch } from 'vue';
 import { useScroll } from "~/compostables/useScroll";
 import { useAppStore } from "~/stores/appStore";
+import { gsap } from "gsap";
+const { $TextPlugin } = useNuxtApp();
+
 const { scrollBack } = useScroll();
 const appStore = useAppStore();
+
+const originalTitle = "Cooknote";
 
 function handleBack() {
   scrollBack();
 }
+
+watch(() => appStore.selectedDish, (newDish) => {
+  gsap.registerPlugin($TextPlugin);
+  gsap.to('.title', {
+    duration: 1,
+    text: newDish?.name || originalTitle,
+  });
+});
 </script>
 
 <template>
@@ -14,9 +28,7 @@ function handleBack() {
     <button id="back-button" @click="handleBack">
       <img src="/assets/icons/back.svg" />
     </button>
-    <h1 class="title">
-      {{ appStore.selectedDish ? `${appStore.selectedDish.name}` : "CookNote" }}
-    </h1>
+    <h1 class="title">{{ originalTitle }}</h1>
   </header>
 </template>
 

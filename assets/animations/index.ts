@@ -1,7 +1,9 @@
 // src/animations.js
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { TextPlugin } from "gsap/TextPlugin";
 import { CSSPlugin } from "gsap/CSSPlugin";
+import { useAppStore } from "~/stores/appStore";
 
 // Register the plugins
 gsap.registerPlugin(ScrollToPlugin, CSSPlugin);
@@ -36,14 +38,7 @@ export function createScrollTimeline(index: number) {
       { opacity: 1, x: 0, duration: 0.5, stagger: 0.2 },
       "-=0.5"
     );
-    // tl.fromTo(
-      // ".procedure ol li", // Targeting list items directly
-      // { opacity: 0, y: 100 },
-      // { opacity: 1, y: 0, duration: 0.5, stagger: 0.2 }, 
-      // "-=0.1"
-    // );
-    
-  //scroll left
+    //scroll left
   } else {
     tl.to(
       backButton,
@@ -52,6 +47,10 @@ export function createScrollTimeline(index: number) {
         opacity: 0,
         x: -20,
         ease: "power2.in",
+        onComplete: () => {
+          const appStore = useAppStore();
+          appStore.selectedDish = null;
+        },
       },
       1
     );
