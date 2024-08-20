@@ -13,7 +13,7 @@
     "@pinia/nuxt": "^0.5.2",
     "mongoose": "^8.5.2",
     "nuxt": "^3.12.4",
-    "nuxt-mongoose": "^1.0.6",
+    "nuxt-mongoose": "^0.0.9",
     "nuxt-server-utils": "^0.0.7",
     "pinia": "^2.2.0",
     "vue": "latest"
@@ -23,6 +23,6 @@
     "nuxt-headlessui": "^1.2.0",
     "sass": "^1.77.8",
     "typescript": "^5.5.4",
-    "vue-tsc": "^1.8.27"
+    "vue-tsc": "^2.0.29"
   }
 }

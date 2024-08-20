@@ -5,4 +5,5 @@ export interface Dish {
     name: string;
     ingredients: Array<Ingredient>;
     procedure: Array<string>;
+    tags: Array<string>;
   }

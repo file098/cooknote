@@ -7,14 +7,9 @@ const selectedDish = computed<Dish | null>(() => appStore.selectedDish);
 
 <template>
   <div class="ingredient fade-in">
-    <div
-      v-for="ingredient in selectedDish?.ingredients"
-      class="ingredient__row"
-    >
+    <div v-for="ingredient in selectedDish?.ingredients" class="ingredient__row">
       <span class="ingredient__name">{{ ingredient.name }}</span>
-      <span class="ingredient__quantity"
-        ><strong>{{ ingredient.quantity }}</strong></span
-      >
+      <span class="ingredient__quantity"><strong>{{ ingredient.quantity }}</strong></span>
     </div>
   </div>
 </template>
@@ -28,17 +23,20 @@ const selectedDish = computed<Dish | null>(() => appStore.selectedDish);
 
   &__row {
     display: grid;
-    grid-template-columns: 1fr auto; /* Name takes available space, quantity is auto-sized */
+    grid-template-columns: 1fr auto;
+    /* Name takes available space, quantity is auto-sized */
     align-items: center;
     border-bottom: 1px solid grey;
   }
 
   &__name {
-    justify-self: start; /* Aligns name to the start of the grid cell */
+    justify-self: start;
+    /* Aligns name to the start of the grid cell */
   }
 
   &__quantity {
-    justify-self: end; /* Aligns quantity to the end of the grid cell */
+    justify-self: end;
+    /* Aligns quantity to the end of the grid cell */
   }
 }
 </style>
