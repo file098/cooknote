@@ -1,17 +1,27 @@
 <script setup lang="ts">
 import type { Dish } from "~/types/dish";
-import { useScroll } from "../compostables/useScroll";
-import recipes from "../recipes.json";
+import { useScroll } from "~/compostables/useScroll";
 
 const { scrollRight } = useScroll();
+const recipeList = ref<Dish[]>([]);
+const error = ref(null);
 
-function handleClick(dish: Dish) {
+try {
+  const { data, error: fetchError } = await useFetch('/api/dishes');
+  if (fetchError.value) {
+    error.value = fetchError.value.message || 'Failed to fetch dishes';
+  } else {
+    recipeList.value = data.value.data as Dish[];
+  }
+} catch (e) {
+  error.value = e.message || 'An unexpected error occurred';
+}
+
+async function handleClick(dish: Dish) {
   const appStore = useAppStore();
   appStore.selectedDish = dish;
   scrollRight();
 }
-
-const recipeList = recipes as Array<Dish>;
 </script>
 
 <template>
@@ -27,12 +37,15 @@ const recipeList = recipes as Array<Dish>;
 <style scoped lang="scss">
 .list-wrapper {
   overflow-y: auto;
+
   & ul {
     list-style-type: none;
+
     & li {
       margin-bottom: 1rem;
       cursor: pointer;
       width: fit-content;
+
       a {
         color: inherit;
         text-decoration: none;

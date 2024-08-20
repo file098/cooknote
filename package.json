@@ -11,9 +11,8 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.2",
-    "mongoose": "^8.5.2",
+    "mongoose": "^8.5.3",
     "nuxt": "^3.12.4",
-    "nuxt-mongoose": "^0.0.9",
     "nuxt-server-utils": "^0.0.7",
     "pinia": "^2.2.0",
     "vue": "latest"
@@ -21,6 +20,7 @@
   "devDependencies": {
     "@hypernym/nuxt-gsap": "^2.4.2",
     "nuxt-headlessui": "^1.2.0",
+    "nuxt-mongoose": "^1.0.6",
     "sass": "^1.77.8",
     "typescript": "^5.5.4",
     "vue-tsc": "^2.0.29"
