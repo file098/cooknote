@@ -1,3 +1,9 @@
+<script setup lang="ts">
+definePageMeta({
+  title: "Notes",
+});
+</script>
+
 <template>
   <main id="main">
     <div class="sections">
@@ -5,7 +11,7 @@
         <List />
       </section>
       <section>
-        <Recipe />
+        <Items />
         <Procedure />
       </section>
     </div>
@@ -13,11 +19,6 @@
 </template>
 
 <style scoped lang="scss">
-main {
-  flex: 1;
-  overflow: hidden;
-}
-
 .sections {
   display: flex;
   width: 200vw;

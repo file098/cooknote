@@ -15,7 +15,7 @@ function handleBack() {
       <img src="/assets/icons/back.svg" />
     </button>
     <h1 class="title">
-      {{ appStore.selectedDish ? `${appStore.selectedDish.name}` : "Title" }}
+      {{ appStore.selectedDish ? `${appStore.selectedDish.name}` : "CookNote" }}
     </h1>
   </header>
 </template>
