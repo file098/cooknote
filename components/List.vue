@@ -4,16 +4,16 @@ import { useScroll } from "~/compostables/useScroll";
 
 const { scrollRight } = useScroll();
 const recipeList = ref<Dish[]>([]);
-const error = ref(null);
+const error = ref<string | null>(null);
 
 try {
   const { data, error: fetchError } = await useFetch('/api/dishes');
   if (fetchError.value) {
     error.value = fetchError.value.message || 'Failed to fetch dishes';
   } else {
-    recipeList.value = data.value.data as Dish[];
+    recipeList.value = data.value?.data as Dish[];
   }
-} catch (e) {
+} catch (e: any) {
   error.value = e.message || 'An unexpected error occurred';
 }
 
