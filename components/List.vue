@@ -1,26 +1,28 @@
 <script setup lang="ts">
+import { useNavigation } from "~/compostables/useNavigation";
 import type { Dish } from "~/types/dish";
-import { useScroll } from "~/compostables/useScroll";
 
-const { scrollRight } = useScroll();
 const recipeList = ref<Dish[]>([]);
 const error = ref<string | null>(null);
 
 try {
-  const { data, error: fetchError } = await useFetch('/api/dishes');
+  const { data, error: fetchError } = await useFetch("/api/dishes");
   if (fetchError.value) {
-    error.value = fetchError.value.message || 'Failed to fetch dishes';
+    error.value = fetchError.value.message || "Failed to fetch dishes";
   } else {
-    recipeList.value = data.value?.data as Dish[];
+    if (data.value && "data" in data.value) {
+      recipeList.value = (data.value as any).data as Dish[];
+    }
   }
 } catch (e: any) {
-  error.value = e.message || 'An unexpected error occurred';
+  error.value = e.message || "An unexpected error occurred";
 }
 
 async function handleClick(dish: Dish) {
   const appStore = useAppStore();
   appStore.selectedDish = dish;
-  scrollRight();
+  const { navigateTo } = useNavigation();
+  navigateTo("items");
 }
 </script>
 

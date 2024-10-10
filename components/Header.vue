@@ -1,26 +1,25 @@
 <script setup lang="ts">
-import { watch } from 'vue';
-import { useScroll } from "~/compostables/useScroll";
+import { watch } from "vue";
 import { useAppStore } from "~/stores/appStore";
 import { gsap } from "gsap";
 const { $TextPlugin } = useNuxtApp();
 
-const { scrollBack } = useScroll();
 const appStore = useAppStore();
 
 const originalTitle = "Cooknote";
 
-function handleBack() {
-  scrollBack();
-}
+function handleBack() {}
 
-watch(() => appStore.selectedDish, (newDish) => {
-  gsap.registerPlugin($TextPlugin);
-  gsap.to('.title', {
-    duration: 1,
-    text: newDish?.name || originalTitle,
-  });
-});
+watch(
+  () => appStore.selectedDish,
+  (newDish) => {
+    gsap.registerPlugin($TextPlugin);
+    gsap.to(".title", {
+      duration: 1,
+      text: newDish?.name || originalTitle,
+    });
+  }
+);
 </script>
 
 <template>

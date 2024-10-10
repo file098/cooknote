@@ -1,5 +1,5 @@
 <template>
-    <form action="">
-        <h1>Add your recipe</h1>
-    </form>
+  <form>
+    <input type="text" placeholder="Recipe Name" />
+  </form>
 </template>
