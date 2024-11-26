@@ -26,22 +26,3 @@ const ingredients = [
 
 const servings = ref(1);
 </script>
-
-<style scoped>
-.ingredients {
-  font-family: Arial, sans-serif;
-}
-
-h2 {
-  color: #333;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  padding: 5px 0;
-}
-</style>

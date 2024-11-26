@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import Sidebar from "@/layout/Sidebar.vue";
-import Header from "@/layout/Header.vue";
-import Procedure from "@/layout/Procedure.vue";
 import Photos from "@/components/Photos.vue";
 import Recipes from "@/components/Recipes.vue";
+import Procedure from "@/layout/Procedure.vue";
+import Sidebar from "@/layout/Sidebar.vue";
 import { useAppStore } from "@/stores/appStore";
 
 const appStore = useAppStore();
@@ -17,7 +16,7 @@ const appStore = useAppStore();
       <section>
         <Photos />
         <Procedure />
-        <span id="side-info">{{ appStore.selectedRecipe.name }}</span>
+        <span id="side-info">{{ appStore.selectedRecipe.title }}</span>
       </section>
     </div>
   </main>

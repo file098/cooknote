@@ -25,22 +25,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.procedure {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-}
-
-h2 {
-  color: #333;
-}
-
-ol {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-</style>

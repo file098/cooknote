@@ -9,7 +9,7 @@ const appStore = useAppStore();
 
 <template>
   <aside>
-    <button @click="appStore.selectedRecipe = null">Home</button>
+    <button @click="appStore.setActiveRecipe(null)">Home</button>
     <div id="list">
       <Info />
       <Ingredients />

@@ -1,5 +1,4 @@
 export interface Recipe {
-    id: string;
     title: string;
     description: string;
     ingredients: string[];
@@ -7,6 +6,4 @@ export interface Recipe {
     prepTime: number; // in minutes
     cookTime: number; // in minutes
     servings: number;
-    createdAt: Date;
-    updatedAt: Date;
 }
